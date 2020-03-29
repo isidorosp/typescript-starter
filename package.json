@@ -1,0 +1,31 @@
+{
+  "name": "typescript-starter",
+  "version": "1.0.0",
+  "description": "Standard repo for NodeJS Typescript Projects",
+  "scripts": {
+    "dev": "tsnd --respawn src/index.ts",
+    "start": "npm run build && node dist/index.js",
+    "lint": "xo",
+    "lint:fix": "xo --fix",
+    "build": "rimraf ./dist && tsc && run lint:fix",
+    "watch": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Isidoros Passadis",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^13.9.5",
+    "prettier": "^2.0.2",
+    "rimraf": "^3.0.2",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.8.3",
+    "xo": "^0.28.1"
+  },
+  "dependencies": {
+    "common-tags": "^1.8.0",
+    "dotenv": "^8.2.0"
+  },
+  "engines": {
+    "node": ">=12"
+  }
+}
