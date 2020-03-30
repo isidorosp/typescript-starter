@@ -28,5 +28,21 @@
   },
   "engines": {
     "node": ">=12"
+  },
+  "xo": {
+    "space": 2,
+    "prettier": true,
+    "rules": {
+      "unicorn/filename-case": [
+        "error",
+        {
+          "cases": {
+            "camelCase": true,
+            "kebabCase": true,
+            "pascalCase": true
+          }
+        }
+      ]
+    }
   }
 }
