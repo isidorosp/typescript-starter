@@ -7,7 +7,9 @@
     "start": "npm run build && node dist/index.js",
     "lint": "xo",
     "lint:fix": "xo --fix",
-    "build": "rimraf ./dist && tsc && run lint:fix",
+    "clean": "rimraf ./dist",
+    "build:tsc": "tsc",
+    "build": "run-s clean build:tsc lint:fix",
     "watch": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +18,7 @@
   "devDependencies": {
     "@types/common-tags": "^1.8.0",
     "@types/node": "^13.9.5",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.0.2",
     "rimraf": "^3.0.2",
     "ts-node-dev": "^1.0.0-pre.44",
